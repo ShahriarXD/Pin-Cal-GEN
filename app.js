@@ -1,6 +1,6 @@
 // ======================PIN GENERATOR STARTS============================
 var pinGenerator = document.getElementById("pinGenerator");
-pinGenerator.addEventListener("click",function() {
+pinGenerator.addEventListener("click", function() {
   var pinNumber = Math.floor(Math.random() * 10000);
   var pinGeneratorScreen = document.querySelectorAll("input")[0];
   pinGeneratorScreen.value = pinNumber;
@@ -27,11 +27,16 @@ for (let x = 0; x < 12; x++) {
     }
     var SUBMIT = document.getElementById("submit-sucess")
     SUBMIT.addEventListener("click",function(){
-      if (x2 == x3) {
-        console.log("lol");
-      } else {
-        console.log("x");
+      var pinGeneratorScreen1 = document.querySelectorAll("input")[0].value;
+      console.log(pinGeneratorScreen1);
+      if (pinGeneratorScreen1 == x3) {
+        var gayeb = document.getElementById("RIGHT");
+        gayeb.style.display = "block"
+      } if (pinGeneratorScreen1 != x3) {
+        var choleayy = document.getElementById("WRONG");
+        choleayy.style.display = "block"
       }
+      
     })
   });
 }
