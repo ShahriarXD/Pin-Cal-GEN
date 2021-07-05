@@ -16,8 +16,6 @@ for (let x = 0; x < 12; x++) {
   var pinInputScreen = document.querySelectorAll("input")[1];
   var store = (pinInputScreen.value);
   var x1 = pinInputScreen.value += ButtonText;
-    var x3 = parseInt(x1)
-    console.log(x3);
     if (ButtonText == "C") {
       pinInputScreen.value = ""
     } else if (ButtonText == "&lt;") {
@@ -28,15 +26,18 @@ for (let x = 0; x < 12; x++) {
     var SUBMIT = document.getElementById("submit-sucess")
     SUBMIT.addEventListener("click",function(){
       var pinGeneratorScreen1 = document.querySelectorAll("input")[0].value;
-      console.log(pinGeneratorScreen1);
-      if (pinGeneratorScreen1 == x3) {
+      var pinGeneratorScreen2 = document.querySelectorAll("input")[1].value;
+      var gg = parseInt(pinGeneratorScreen1)
+      var gg1 = parseInt(pinGeneratorScreen2)
+      console.log(gg);
+      console.log(gg1);
+      if (gg == gg1) {
         var gayeb = document.getElementById("RIGHT");
         gayeb.style.display = "block"
-      } if (pinGeneratorScreen1 != x3) {
+      } if (gg != gg1) {
         var choleayy = document.getElementById("WRONG");
         choleayy.style.display = "block"
       }
-      
     })
   });
 }
